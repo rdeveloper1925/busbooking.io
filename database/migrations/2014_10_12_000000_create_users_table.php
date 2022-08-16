@@ -17,6 +17,10 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->integer('branchId');
+            $table->text('address');
+            $table->text('phoneNumber')->nullable();
+            $table->boolean('mustChangePwd')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

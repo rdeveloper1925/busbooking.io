@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Login view
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('auth.login');
+})->name('login');
+
+//Dashboard route
+Route::get("/dashboard", "App\Http\Controllers\PagesController@dashboard")->name('pages.dashboard');
+//Login submission route
+Route::post('/doLogin', "App\Http\Controllers\UsersController@login")->name('dologin');
+//Logout route
+Route::get("/logout", "App\Http\Controllers\UsersController@logout")->name('logout');
+
+Route::get('/startpwdchange', "App\Http\Controllers\PagesController@startpwdchange")->name('startpwdchange');
+
+
+Route::resource("/user",UsersController::class);

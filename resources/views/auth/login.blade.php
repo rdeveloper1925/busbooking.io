@@ -14,9 +14,9 @@
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- App css -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -82,7 +82,7 @@
                                     {{-- <p class="text-muted mb-0">Not you ? return  <a href="auth-register.html" class="text-primary ml-2">Sign In</a></p> --}}
                                 </div>
                                 <div class="card-body bg-light-alt text-center">
-                                    <span class="text-muted d-none d-sm-inline-block">JIS © 2022</span>                                            
+                                    <span class="text-muted d-none d-sm-inline-block">Bus Booking © 2022</span>                                            
                                 </div>
                             </div><!--end card-->
                         </div><!--end col-->
@@ -96,11 +96,11 @@
 
 
         <!-- jQuery  -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/waves.js"></script>
-        <script src="assets/js/feather.min.js"></script>
-        <script src="assets/js/simplebar.min.js"></script>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/waves.js"></script>
+        <script src="/assets/js/feather.min.js"></script>
+        <script src="/assets/js/simplebar.min.js"></script>
 
         
     </body>

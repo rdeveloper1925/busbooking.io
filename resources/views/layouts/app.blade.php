@@ -32,7 +32,7 @@
             <div class="brand">
                 <a href="#" class="logo">
                     <span>
-                        <img src="/assets/images/favicon.ico" alt="logo-small" class="logo-sm"> <strong style="font-weight: bold;font-size:15px">JIS</strong>
+                        <img src="/assets/images/favicon.ico" alt="logo-small" class="logo-sm"> <strong style="font-weight: bold;font-size:15px">Bus Booking</strong>
                     </span>
                 </a>
             </div>
