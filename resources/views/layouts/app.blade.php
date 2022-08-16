@@ -75,9 +75,24 @@
 
                             <!--start dashboard -->
                             <li class="has-submenu">
-                                <a href="/">
+                                <a href="{{route('user.index')}}">
                                     <span><i data-feather="user" class="align-self-center hori-menu-icon"></i>User Management</span>
                                 </a>                               
+                            </li>
+                            <li class="has-submenu">
+                                <a href="{{route('driver.index')}}">
+                                    <span><i data-feather="disc" class="align-self-center hori-menu-icon"></i>Driver Management</span>
+                                </a>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="{{route('bus.index')}}">
+                                    <span><i data-feather="truck" class="align-self-center hori-menu-icon"></i>Bus Management</span>
+                                </a>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="{{route('route.index')}}">
+                                    <span><i data-feather="shuffle" class="align-self-center hori-menu-icon"></i>Route Management</span>
+                                </a>
                             </li>
                             <!--end dashboard-->
 

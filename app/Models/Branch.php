@@ -21,4 +21,8 @@ class Branch extends Model
     public function users(){
         return $this->hasMany(User::class,'userId');
     }
+
+    public function drivers(){
+        return $this->hasMany(Driver::class,'driverId');
+    }
 }

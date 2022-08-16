@@ -15,6 +15,11 @@ class CreateDriversTable extends Migration
     {
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
+            $table->text('name');
+            $table->integer('branchId');
+            $table->text('phoneNumber');
+            $table->text('address')->nullable();
+            $table->text('permitNo');
             $table->timestamps();
         });
     }
