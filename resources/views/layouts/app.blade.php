@@ -76,7 +76,7 @@
                             <!--start dashboard -->
                             <li class="has-submenu">
                                 <a href="/">
-                                    <span><i data-feather="home" class="align-self-center hori-menu-icon"></i>Dashboard</span>
+                                    <span><i data-feather="user" class="align-self-center hori-menu-icon"></i>User Management</span>
                                 </a>                               
                             </li>
                             <!--end dashboard-->
