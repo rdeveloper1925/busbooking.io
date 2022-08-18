@@ -44,7 +44,7 @@
                     <li class="dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                             aria-haspopup="false" aria-expanded="false">
-                            <span class="ml-1 nav-user-name hidden-sm">{{auth()->user()->name}}</span>
+                            <span class="ml-1 nav-user-name hidden-sm">name here</span>
                             <img src="/assets/images/avatar.png" alt="profile-user" class="rounded-circle" />                                 
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -97,7 +97,7 @@
                             <!--end dashboard-->
 
                             <!--start usermgt (only sudo)-->
-                            @can('can sudo')
+                            {{-- @can('can sudo')
                             <li class="has-submenu">
                                 <a href="#">
                                     <span><i data-feather="key" class="align-self-center hori-menu-icon"></i>Access Management</span>
@@ -109,11 +109,11 @@
                                     <li><a href="/insurer"><i data-feather="home" class="mr-2" style="width: 15px"></i>Insurer Management</a></li>
                                 </ul>
                             </li>
-                            @endcan
+                            @endcan --}}
                             <!--end usermgt-->
 
                             <!--bank policy input (only bank)-->
-                            @if(Auth::user()->hasrole('bank-checker') || Auth::user()->hasrole('bank-maker') || Auth::user()->can('can sudo'))
+                            {{-- @if(Auth::user()->hasrole('bank-checker') || Auth::user()->hasrole('bank-maker') || Auth::user()->can('can sudo'))
                             <li class="has-submenu">
                                 <a href="#">
                                     <span><i data-feather="clipboard" class="align-self-center hori-menu-icon"></i>Policy Application</span>
@@ -130,9 +130,9 @@
                                     <li><a href="/policy/track"><i data-feather="map-pin" class="mr-2" style="width: 15px"></i>Track Policy Application</a></li>
                                 </ul>
                             </li>
-                            @endif
+                            @endif --}}
                             <!--end usermgt-->
-
+{{-- 
                             <li class="has-submenu">
                                 <a href="#">
                                     <span><i data-feather="home" class="align-self-center hori-menu-icon"></i>Dashboard</span>
@@ -241,7 +241,7 @@
                                 <a href="widgets.html">
                                     <span><i data-feather="layers" class="align-self-center hori-menu-icon"></i>Widgets</span>
                                 </a>                               
-                            </li><!--end has-submenu-->
+                            </li><!--end has-submenu--> --}}
                         </ul><!-- End navigation menu -->
                     </div> <!-- end navigation -->
                 </div>

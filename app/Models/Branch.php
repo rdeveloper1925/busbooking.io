@@ -14,7 +14,7 @@ class Branch extends Model
         'branchName',
         'branchLocation',
         'contactPerson',
-        'phoneNumber'
+        'phoneNumber' //nullable
     );
 
 

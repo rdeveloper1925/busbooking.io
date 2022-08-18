@@ -15,6 +15,18 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->integer("routeId");
+            $table->integer("busId");
+            $table->integer("driverId");
+            $table->text("currency");
+            $table->integer("amountPaid")->nullable();
+            $table->text("seatNumber");
+            $table->boolean("bookingStatus")->default(false);
+            $table->boolean("multipleBookings")->default(false);
+            $table->text("customerName");
+            $table->text("phoneNumber");
+            $table->integer("userId");
+
             $table->timestamps();
         });
     }

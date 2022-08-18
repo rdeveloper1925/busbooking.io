@@ -34,4 +34,8 @@ class Route extends Model
     public function bookings(){
         return $this->hasMany(Booking::class);
     }
+
+    public function subRoutes(){
+        return $this->hasMany(SubRoute::class,'subrouteId');
+    }
 }

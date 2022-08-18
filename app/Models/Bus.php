@@ -21,4 +21,5 @@ class Bus extends Model
         return $this->hasMany(Seat::class);
     }
 
+
 }
