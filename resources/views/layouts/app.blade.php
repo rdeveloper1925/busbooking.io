@@ -44,7 +44,7 @@
                     <li class="dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                             aria-haspopup="false" aria-expanded="false">
-                            <span class="ml-1 nav-user-name hidden-sm">name here</span>
+                            <span class="ml-1 nav-user-name hidden-sm">{{auth()->user()->name}}</span>
                             <img src="/assets/images/avatar.png" alt="profile-user" class="rounded-circle" />                                 
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -74,6 +74,12 @@
                         <ul class="navigation-menu">
 
                             <!--start dashboard -->
+                            {{-- superAdmin, admin --}}
+                            <li class="has-submenu">
+                                <a href="{{route('branch.index')}}">
+                                    <span><i data-feather="git-branch" class="align-self-center hori-menu-icon"></i>Branch Management</span>
+                                </a>
+                            </li>
                             <li class="has-submenu">
                                 <a href="{{route('user.index')}}">
                                     <span><i data-feather="user" class="align-self-center hori-menu-icon"></i>User Management</span>

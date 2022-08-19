@@ -12,15 +12,9 @@ class Route extends Model
         'id',
         'origin',
         'finalDestination',
-        'busId',
-        'driverId',
         'routeSlug',
         'departureDateTime',
-        'capacity',
-        'actualCarriage',
-        'ratePerSeat',
         'userId',
-        'via'
     );
 
     public function buses(){
@@ -37,5 +31,9 @@ class Route extends Model
 
     public function subRoutes(){
         return $this->hasMany(SubRoute::class,'subrouteId');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class,'userId');
     }
 }

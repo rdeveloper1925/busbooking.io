@@ -15,7 +15,8 @@ class BranchController extends Controller
      */
     public function index()
     {
-        //
+        $branches=Branch::all()->load('users');
+        return view('branches.index')->with('branches',$branches);
     }
 
     /**
@@ -25,7 +26,7 @@ class BranchController extends Controller
      */
     public function create()
     {
-        //
+        return view('branches.create');
     }
 
     /**
@@ -36,7 +37,14 @@ class BranchController extends Controller
      */
     public function store(StoreBranchRequest $request)
     {
-        //
+        $branch=new Branch([
+            'branchName'=>ucwords($request->branchName),
+            'branchLocation'=>$request->branchLocation,
+            'contactPerson'=>$request->contactPerson,
+            'phoneNumber' => $request->phoneNumber,
+        ]);
+        $branch->save();
+        return redirect(route('branch.index'))->with('success','Branch Created Successfully!');
     }
 
     /**
@@ -47,7 +55,7 @@ class BranchController extends Controller
      */
     public function show(Branch $branch)
     {
-        //
+        
     }
 
     /**

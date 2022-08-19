@@ -16,8 +16,8 @@ class Booking extends Model
         'currency',
         'amountPaid', //nullable
         'seatNumber',
-        'bookingStatus',
-        'multipleBookings',
+        'bookingStatus', //has default
+        'multipleBookings',//has default
         'customerName',
         'phoneNumber',
         'userId'

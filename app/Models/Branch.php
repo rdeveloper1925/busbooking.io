@@ -14,15 +14,19 @@ class Branch extends Model
         'branchName',
         'branchLocation',
         'contactPerson',
-        'phoneNumber' //nullable
+        'phoneNumber', //nullable
     );
 
 
     public function users(){
-        return $this->hasMany(User::class,'userId');
+        return $this->hasMany(User::class,'branchId');
     }
 
     public function drivers(){
         return $this->hasMany(Driver::class,'driverId');
+    }
+
+    public function usersPerBranch(){
+        return ;
     }
 }

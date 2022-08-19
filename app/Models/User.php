@@ -56,4 +56,12 @@ class User extends Authenticatable
     public function bookings(){
         return $this->hasMany(Booking::class);
     }
+
+    public function subroutes(){
+        return $this->hasMany(SubRoute::class);
+    }
+
+    public function route(){
+        return $this->hasMany(Route::class);
+    }
 }

@@ -13,7 +13,8 @@ class StoreBranchRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        //TODO: set who can create branch based on permission
+        return true;
     }
 
     /**
@@ -24,7 +25,10 @@ class StoreBranchRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'branchName'=>"required",
+            'branchLocation'=>'required',
+            'contactPerson'=>'required',
+            'phoneNumber'=>'required'
         ];
     }
 }

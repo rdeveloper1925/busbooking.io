@@ -11,9 +11,10 @@ class SubRoute extends Model
     protected $fillable=array(
         'id',
         'routeId',
-        'costPerSeat',
+        'ratePerSeat',
         'busId',
-        'driverId'
+        'driverId',
+        'userId'
     );
 
     public function route(){
@@ -26,6 +27,14 @@ class SubRoute extends Model
 
     public function driver(){
         return $this->belongsTo(Driver::class,'driverId');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class,'userId');
+    }
+
+    public function routeSlug($routeId){
+        return Route::where('id',$routeId);
     }
 
 }

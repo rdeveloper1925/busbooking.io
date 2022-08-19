@@ -17,7 +17,6 @@ class PagesController extends Controller
         $drivers=Driver::count();
         $routes=Route::count();
         $operators=User::count();
-        dd([$buses, $branches, $drivers, $routes, $operators]);
         return view("dashboard")->with([$buses,$branches,$drivers,$routes,$operators]);
     }
 

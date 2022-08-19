@@ -15,6 +15,11 @@ class CreateSubRoutesTable extends Migration
     {
         Schema::create('sub_routes', function (Blueprint $table) {
             $table->id();
+            $table->integer("routeId");
+            $table->integer("ratePerSeat");
+            $table->integer("busId");
+            $table->integer("driverId");
+            $table->integer("userId");
             $table->timestamps();
         });
     }
