@@ -17,6 +17,8 @@ class CreateSubRoutesTable extends Migration
             $table->id();
             $table->integer("routeId");
             $table->integer("ratePerSeat");
+            $table->integer("parentBranch");
+            $table->text("currency");
             $table->integer("busId");
             $table->integer("driverId");
             $table->integer("userId");

@@ -11,7 +11,8 @@
 @section('breadcrumbs')
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="javascript:void(0);">Access Managment</a></li>
-    <li class="breadcrumb-item active">Branch Management</li>
+    <li class="breadcrumb-item"><a href="javascript:void(0);">Branch Managment</a></li>
+    <li class="breadcrumb-item active">Branch View</li>
 </ol>
 @endsection
 
@@ -41,50 +42,17 @@
         <div class="card">
             <div class="card-body">
 
-                <h4 class="mt-0 header-title">Branches</h4>
-                <div class="row">
-                    <div class="col-12 mb-4">
-                        <a href="{{route('branch.create')}}" class="btn btn-soft-primary waves-effect btn-lg waves-light">Create
-                            Branch</a>
-                    </div>
-                </div>
-                <table id="user_table" class="table table-striped table-bordered dt-responsive nowrap"
-                    style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Location</th>
-                            <th>Contact Person</th>
-                            <th>Phone Number</th>
-                            <th>Number of system Users</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        @foreach($branches as $u)
-                        <tr>
-                            <td>{{ucwords($u->branchName)}}</td>
-                            <td>{{$u->branchLocation}}</td>
-                            <td>
-                                {{$u->contactPerson}}
-                            </td>
-                            <td>{{$u->phoneNumber}}</td>
-                            <td>{{count($u->users)}}</td>
-                            <td>
-                                <a href="{{route('branch.show',$u->id)}}" class="btn btn-sm btn-primary">View</a>
-                                {{-- <a href="{{route('branch.edit',$u->id)}}" class="btn btn-warning btn-sm">Edit</a> --}}
-                                <form action="{{route('branch.destroy',$u->id)}}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                        @endforeach
-
-                    </tbody>
-                </table>
+                <h4 class="mt-0 header-title">Branch: {{$branch->branchName}}</h4>
+                <li class="list-group m-2">
+                    <li class="list-group-item">Branch Name: <strong>{{$branch->branchName}}</strong></li>
+                    <li class="list-group-item">Branch Location: <strong>{{$branch->branchLocation}}</strong></li>
+                    <li class="list-group-item">Contact Person: <strong>{{$branch->contactPerson}}</strong></li>
+                    <li class="list-group-item">Phone Number: <strong>{{$branch->phoneNumber}}</strong></li>
+                    <li class="list-group-item"><h4 class="text-bold text-primary">Users In branch:</h4></li>
+                    @foreach($branch->users as $u)
+                        <li class="list-group-item">{{$u->name}}, {{$u->phoneNumber}}</li>
+                    @endforeach
+                </li>
             </div>
         </div>
     </div> <!-- end col -->

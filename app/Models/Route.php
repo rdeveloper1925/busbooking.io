@@ -14,6 +14,7 @@ class Route extends Model
         'finalDestination',
         'routeSlug',
         'departureDateTime',
+        'branchId',
         'userId',
     );
 
@@ -35,5 +36,9 @@ class Route extends Model
 
     public function user(){
         return $this->belongsTo(User::class,'userId');
+    }
+
+    public function branch(){
+        return $this->belongsTo(Branch::class,'branchId');
     }
 }

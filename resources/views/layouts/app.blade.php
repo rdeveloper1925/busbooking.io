@@ -42,7 +42,7 @@
                 <ul class="list-unstyled topbar-nav float-right mb-0"> 
                     
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+                        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="{{route('pages.dashboard')}}" role="button"
                             aria-haspopup="false" aria-expanded="false">
                             <span class="ml-1 nav-user-name hidden-sm">{{auth()->user()->name}}</span>
                             <img src="/assets/images/avatar.png" alt="profile-user" class="rounded-circle" />                                 
@@ -74,21 +74,30 @@
                         <ul class="navigation-menu">
 
                             <!--start dashboard -->
+                            <li class="has-submenu">
+                                <a href="{{route('pages.dashboard')}}">
+                                    <span><i data-feather="layers" class="align-self-center hori-menu-icon"></i>Dashboard</span>
+                                </a>
+                            </li>
                             {{-- superAdmin, admin --}}
                             <li class="has-submenu">
-                                <a href="{{route('branch.index')}}">
-                                    <span><i data-feather="git-branch" class="align-self-center hori-menu-icon"></i>Branch Management</span>
+                                <a href="#">
+                                    <span><i data-feather="key" class="align-self-center hori-menu-icon"></i>Access Management</span>
                                 </a>
+                                <ul class="submenu">
+                                    <li><a href="{{route('branch.index')}}"><i data-feather="git-branch" class="mr-2" style="width: 15px"></i>Branch Management</a></li>
+                                    <li><a href="{{route('user.index')}}"><i data-feather="user" class="mr-2" style="width: 15px"></i>User Management</a></li>
+                                    <li><a href="{{route('driver.index')}}"><i data-feather="disc" class="mr-2" style="width: 15px"></i>Driver Management</a></li>
+                                </ul>
                             </li>
                             <li class="has-submenu">
-                                <a href="{{route('user.index')}}">
-                                    <span><i data-feather="user" class="align-self-center hori-menu-icon"></i>User Management</span>
-                                </a>                               
-                            </li>
-                            <li class="has-submenu">
-                                <a href="{{route('driver.index')}}">
-                                    <span><i data-feather="disc" class="align-self-center hori-menu-icon"></i>Driver Management</span>
+                                <a href="{{route('booking.index')}}">
+                                    <span><i data-feather="calendar" class="align-self-center hori-menu-icon"></i>Bookings</span>
                                 </a>
+                                <ul class="submenu">
+                                    <li><a href="{{route('booking.index')}}"><i data-feather="git-branch" class="mr-2" style="width: 15px"></i>Branch
+                                            Management</a></li>
+                                </ul>
                             </li>
                             <li class="has-submenu">
                                 <a href="{{route('bus.index')}}">

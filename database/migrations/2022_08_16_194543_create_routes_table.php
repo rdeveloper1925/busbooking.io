@@ -20,6 +20,7 @@ class CreateRoutesTable extends Migration
             $table->text("routeSlug");
             $table->datetime("departureDateTime");
             $table->integer("userId");
+            $table->integer("branchId");
             $table->timestamps();
         });
     }

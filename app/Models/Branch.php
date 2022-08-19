@@ -15,6 +15,7 @@ class Branch extends Model
         'branchLocation',
         'contactPerson',
         'phoneNumber', //nullable
+        
     );
 
 
@@ -28,5 +29,9 @@ class Branch extends Model
 
     public function usersPerBranch(){
         return ;
+    }
+
+    public function routes(){
+        return $this->hasMany(Route::class,"branchId");
     }
 }

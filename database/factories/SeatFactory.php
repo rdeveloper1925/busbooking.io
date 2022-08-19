@@ -14,7 +14,8 @@ class SeatFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'seatNumber'=>$this->faker->numberBetween(1,63),
+            'busId'=>$this->faker->numberBetween(1,40)
         ];
     }
 }

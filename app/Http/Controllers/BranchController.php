@@ -56,6 +56,7 @@ class BranchController extends Controller
     public function show(Branch $branch)
     {
         
+        return view('branches.view')->with('branch',$branch);
     }
 
     /**
@@ -89,6 +90,8 @@ class BranchController extends Controller
      */
     public function destroy(Branch $branch)
     {
-        //
+        $usercount=$branch->users()->count();
+        $destroyed=Branch::destroy($branch->id);
+        return redirect(route('branch.index'))->with('success','Branch Deleted successfully '.$destroyed.'. '.$usercount." user(s) are left without a branch!!");
     }
 }

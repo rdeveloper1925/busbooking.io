@@ -12,6 +12,8 @@ class SubRoute extends Model
         'id',
         'routeId',
         'ratePerSeat',
+        'currency',
+        'parentBranch',
         'busId',
         'driverId',
         'userId'
@@ -35,6 +37,10 @@ class SubRoute extends Model
 
     public function routeSlug($routeId){
         return Route::where('id',$routeId);
+    }
+
+    public function branch(){
+        return $this->belongsTo(Branch::class,'parentBranch');
     }
 
 }

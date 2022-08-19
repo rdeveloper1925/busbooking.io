@@ -14,7 +14,13 @@ class SubRouteFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'routeId'=>$this->faker->numberBetween(1,20),
+            'ratePerSeat'=>$this->faker->numberBetween(300,2000),
+            'currency'=>$this->faker->currencyCode,
+            'parentBranch'=>$this->faker->numberBetween(1,10),
+            'busId'=>$this->faker->numberBetween(1,40),
+            'userId'=>$this->faker->numberBetween(1,10),
+            'driverId'=>$this->faker->numberBetween(1,50)
         ];
     }
 }

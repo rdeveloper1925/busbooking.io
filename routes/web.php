@@ -67,6 +67,7 @@ Route::middleware(['auth'])->group(function () {
     );
     Route::resource("/bus", BusController::class);
     Route::resource("/route", RouteController::class);
+    Route::resource("/booking",BookingController::class);
 
     //Reports
     Route::get("/report/teller", "App\Http\Controllers\ReportsController@tellerReport");

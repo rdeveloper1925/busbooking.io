@@ -14,7 +14,11 @@ class DriverFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=>$this->faker->name(),
+            'branchId'=>$this->faker->numberBetween(1,10),
+            'phoneNumber'=>$this->faker->phoneNumber(),
+            'address'=>$this->faker->address(),
+            'permitNo'=>$this->faker->randomAscii()
         ];
     }
 }
